@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input"/>
+<button onclick="addArr()">Add</button>
+<button onclick="displayArr()">Display</button>
+<p id="output"></p>
+<script>
+    let arr = [];
+    function addArr() {
+        arr.push(document.getElementById('input').value);
+        document.getElementById('input').value = '';
+    }
+    function displayArr() {
+        for (let i = 0; i < arr.length; i ++) {
+            document.getElementById('output').innerHTML += 'Element ' +i+ ' = ' + arr[i] + '<br/>';
+        }
+    }
+    console.log(arr)
+</script>
+</body>
+</html>

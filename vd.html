@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //b4: Xoa cac phan tu trung lap
+    // let number = [1, 2, 4, 2, 6, 8, 12, 9, 8, 23, 4, 23];
+    // function sum(array) {
+    //     let total = 0;
+    //     for (let i = 0; i < array.length; i++) {
+    //         total += array[i];
+    //     }
+    //     return total;
+    // }
+    // sum(number);
+    // console.log(sum(number))
+
+    function sum(array) {
+        let total = 0;
+        for (const element of array) {
+            total += element
+        }
+        return total;
+    }
+// Tim gia tri lon nhat nho nhat
+//     function findMax(array) {
+//         let max ;
+//         max = array[0];
+//         let min = array[0]
+//         for (const element of array) {
+//             if (max < element){
+//                 max = element
+//             }
+//
+//             if (min > element) {
+//                 min = element
+//             }
+//         }
+//         return [min, max]
+//     }
+//     let b = findMax(number);
+//     console.log(b)
+
+    //b3: Tim cac phan tu trung lap trong mang
+    let number = [1, 2, 4, 2, 6, 8, 12, 9, 8, 23, 4, 23];
+    function deleteElement () {
+        let n = number.length
+        for (let i = 0; i < n; i ++) {
+            for (let j = 1 + i; j < n; j ++) {
+                if (number[i] === number[j]) {
+                    document.write(number[i] + " ")
+                    // number.splice(number[i], 1);
+
+                }
+            }
+        }
+        return number;
+    }
+    deleteElement();
+    console.log(number);
+</script>
+</body>
+</html>
